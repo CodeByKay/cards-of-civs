@@ -1,0 +1,45 @@
+Cards of Civilization
+Two player 1v1 real time queue based strategy game, with a time based element gathering resources Food, Wood, Gold, Stone based on the number of the player's villagers assigned to specific resources.
+Each player has their own half side of a board which has spaces for each resource type and which counts the quantity of villagers for that resource.
+The board also has spaces for the default town center and buildings and military units as they are created.
+Players can gain more villagers and assign them by playing a villager action
+Players begin the game with 0 resources, and a default 2 villagers, 1 in food and 1 in wood.
+Each number of villager gathers 5 unit of their specific resource per time unit.
+Time units are set by the players. Time can be slow, normal, or fast and the time units can be decided later.
+If players have enough resources, they can queue up units, economic upgrades, production buildings, or military buildings.
+However, each time unit an action is dequeued. Multiple actions could overlap at the same time if the build or upgrade time takes multiple time units.
+Each building card has a specified time to build, and can only be used after it finishes building.
+Each building also has a specific hitpoint, which is reduced based on damage calculations when military units are ordered to attack.
+Economic upgrades are applied to their specific resource space, and increases the amount of resource gathered per time unit by 5 units. Once completed, economic upgrades remains permanently for the player.
+Military buildings are required to create military units.
+When queued, military units take a specified time to be played on the military space of the board.
+Military units can attack each other by dragging a group of military units on top of the enemy military units.
+Damages are calculated and whichever unit wins remains on the board.
+Military and production buildings can be attacked only if there are no military units on the board.
+Production buildings are required for their specific economic upgrade and protects villagers.
+If a production building is destroyed, villagers for that resource may be attacked, losing an amount of villager calculated based on the military unit damage.
+Town center can only be attacked if there are no more buildings even if the player still has villagers and resources.
+Building any building will require the enemy to redirect to that building before they can attack the town center again.
+Another way to protect buildings is to add walls to the building which gives them additional hitpoints.
+Once they have enough resources, players can advance to the next age which keeps villagers from being queued up.
+Once they reach the new age, players unlock economic upgrades, military buildings and units, and military upgrades.
+The military buildings and units are as followed:
+Barracks:
+Unlocked in age 1 and contains Swordsmen
+Age 2 unlocks Spearmen and Swordsmen can upgrade to level 2
+Age 3 Spearmen can upgrade to level 2 and Swordsmen can upgrade to level 3
+Age 4 Spearmen can upgrade to level 3 and Swordsmen can upgrade to level 4
+Archery Range:
+Unlocked in age 2 and contains Archers and Skirmishers
+Age 3 unlocks Calvary Archers and Archers can upgrade to level 2 and Skirmishers can upgrade to level 2
+Age 4 Calvary Archers can upgrade to level 2 and Archers can upgrade to level 3 and Skirmishers can upgrade to level 3
+Stables:
+Unlocked in age 2 and contains Scouts
+Age 3 unlocks Knights and Camels and Scouts can upgrade to level 2
+Age 4 Knights can upgrade to level 2 and Camels can upgrade to level 2 and Scouts can upgrade to level 3
+Castle:
+Unlocked in age 3 and contains Siege Rams
+Age 4 unlocks Catapult and Siege Rams can upgrade to level 2
+Castles can attack back against military units attacking them.
+Each military unit has a specific base damage output, hitpoints, range, and speed. They also have bonuses based on what units they are attacking or are being attacked by. Siege Rams and Catapult have bonuses against buildings. These can all be configured by a table later. The formula for Damage = Base Damage + Counter Damage + Range Difference + Speed Difference
+The queue for attacking is separate from the queue for building, production, and upgrading.
