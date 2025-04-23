@@ -1,5 +1,5 @@
-import { AgeEnum } from "../../enum/ageEnum";
-import { ResourceEnum } from "../../enum/resourcesEnum";
+import { AgeEnum } from "../enum/ageEnum";
+import { ResourceEnum } from "../enum/resourcesEnum";
 
 export interface BaseBuilding {
   name: string;

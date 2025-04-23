@@ -1,6 +1,6 @@
 export const enum AgeEnum {
-    DARK = 1,
-    FEUDAL = 2,
-    CASTLE = 3,
-    IMPERIAL = 4
+    AGE_1 = 'Dark',
+    AGE_2 = 'Feudal',
+    AGE_3 = 'Castle',
+    AGE_4 = 'Imperial'
 }
