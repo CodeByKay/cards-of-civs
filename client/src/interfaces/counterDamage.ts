@@ -1,6 +1,9 @@
+import { BaseBuilding } from "./building";
 import { BaseUnit } from "./unit";
 
 export interface CounterDamage {
-    units: BaseUnit[];
-    damage: number;
+    counters: {
+        unit: BaseUnit | BaseBuilding;
+        damage: number;
+    }[];    
 }

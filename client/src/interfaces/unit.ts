@@ -15,6 +15,7 @@ export interface BaseUnit {
     upgrade: Upgrade | null;
     level: number;
     baseDamage: number;
+    structureDamage: number;
     counterDamage: CounterDamage | null;
     range: number;
     speed: number;

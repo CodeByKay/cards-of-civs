@@ -1,16 +1,11 @@
 import { BaseUnit } from "../../interfaces/unit";
+import { BaseBuilding } from "../../interfaces/building";
 import { AgeEnum } from "../../enum/ageEnum";
 import { ResourceEnum } from "../../enum/resourcesEnum";
 import { MilitaryUpgrade } from "../../interfaces/militaryUpgrade";
-import { CounterDamage } from "../../interfaces/counterDamage";
 
-const counter: CounterDamage = {
-    units: [],
-    damage: 0,
-}
-
-export const Swordman: BaseUnit = {
-    name: 'Swordman',
+export const Swordsman: BaseUnit = {
+    name: 'Swordsman',
     cost: [
         {
             type: ResourceEnum.FOOD,
@@ -21,7 +16,6 @@ export const Swordman: BaseUnit = {
         }
     ],
     queueTime: 21,
-    counterDamage: counter,
     range: 1,
     speed: 3,
 
@@ -30,20 +24,23 @@ export const Swordman: BaseUnit = {
     baseDamage: 0,
     hp: 0,
     upgrade: null,
+    structureDamage: 0,
+    counterDamage: null,
 }
 
-export const Swordman_4: typeof Swordman = {
-    ...Swordman,
-    ageRequirement: AgeEnum.AGE_4,
+export const Swordsman_4: typeof Swordsman = {
+    ...Swordsman,
+    ageRequirement: AgeEnum.IMPERIAL,
     level: 4,
     baseDamage: 12,
     hp: 65,
     upgrade: null,
+    structureDamage: 4,
 }
 
-const SwordmanUpgrade_3: MilitaryUpgrade = {
-    unit: Swordman_4,
-    ageRequirement: AgeEnum.AGE_4,
+const SwordsmanUpgrade_3: MilitaryUpgrade = {
+    unit: Swordsman_4,
+    ageRequirement: AgeEnum.IMPERIAL,
     cost: [
         {
             type: ResourceEnum.FOOD,
@@ -56,18 +53,19 @@ const SwordmanUpgrade_3: MilitaryUpgrade = {
     queueTime: 45,
 }
 
-export const Swordman_3: typeof Swordman = {
-    ...Swordman,
-    ageRequirement: AgeEnum.AGE_3,
+export const Swordsman_3: typeof Swordsman = {
+    ...Swordsman,
+    ageRequirement: AgeEnum.CASTLE,
     level: 3,
     baseDamage: 9,
     hp: 60,
-    upgrade: SwordmanUpgrade_3,
+    upgrade: SwordsmanUpgrade_3,
+    structureDamage: 3,
 }
 
-const SwordmanUpgrade_2: MilitaryUpgrade = {
-    unit: Swordman_3,
-    ageRequirement: AgeEnum.AGE_3,
+const SwordsmanUpgrade_2: MilitaryUpgrade = {
+    unit: Swordsman_3,
+    ageRequirement: AgeEnum.CASTLE,
     cost: [
         {
             type: ResourceEnum.FOOD,
@@ -80,18 +78,19 @@ const SwordmanUpgrade_2: MilitaryUpgrade = {
     queueTime: 40,
 }
 
-export const Swordman_2: typeof Swordman = {
-    ...Swordman,
-    ageRequirement: AgeEnum.AGE_2,
+export const Swordsman_2: typeof Swordsman = {
+    ...Swordsman,
+    ageRequirement: AgeEnum.FEUDAL,
     level: 2,
     baseDamage: 6,
     hp: 45,
-    upgrade: SwordmanUpgrade_2,
+    upgrade: SwordsmanUpgrade_2,
+    structureDamage: 2,
 }
 
-const SwordmanUpgrade_1: MilitaryUpgrade = {
-    unit: Swordman_2,
-    ageRequirement: AgeEnum.AGE_2,
+const SwordsmanUpgrade_1: MilitaryUpgrade = {
+    unit: Swordsman_2,
+    ageRequirement: AgeEnum.FEUDAL,
     cost: [
         {
             type: ResourceEnum.FOOD,
@@ -104,11 +103,12 @@ const SwordmanUpgrade_1: MilitaryUpgrade = {
     queueTime: 40,
 }
 
-export const Swordman_1: typeof Swordman = {
-    ...Swordman,
-    ageRequirement: AgeEnum.AGE_1,
+export const Swordsman_1: typeof Swordsman = {
+    ...Swordsman,
+    ageRequirement: AgeEnum.DARK,
     level: 1,
     baseDamage: 4,
     hp: 40,
-    upgrade: SwordmanUpgrade_1,
+    upgrade: SwordsmanUpgrade_1,
+    structureDamage: 0,
 }

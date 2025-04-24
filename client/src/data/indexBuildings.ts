@@ -1,0 +1,21 @@
+import { Barracks } from './buildings/Barracks';
+import { ArcheryRange } from './buildings/ArcheryRange';
+import { Stable } from './buildings/Stable';
+import { Castle } from './buildings/Castle';
+import { LumberCamp } from './buildings/LumberCamp';
+import { Mill } from './buildings/Mill';
+import { GoldMine } from './buildings/GoldMine';
+import { StoneMine } from './buildings/StoneMine';
+import { TownCenter } from './buildings/TownCenter';
+
+export {
+    Barracks,
+    ArcheryRange,
+    Stable,
+    Castle,
+    LumberCamp,
+    Mill,
+    GoldMine,
+    StoneMine,
+    TownCenter,
+};

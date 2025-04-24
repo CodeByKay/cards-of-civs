@@ -6,4 +6,6 @@ export interface MilitaryBuilding extends BaseBuilding {
     type: MilitaryBuildingEnum;
     units: BaseUnit[];
     damage: number;
+    range: number;
+    speed: number;
 }

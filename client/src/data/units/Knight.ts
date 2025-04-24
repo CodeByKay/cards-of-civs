@@ -2,113 +2,61 @@ import { BaseUnit } from "../../interfaces/unit";
 import { AgeEnum } from "../../enum/ageEnum";
 import { ResourceEnum } from "../../enum/resourcesEnum";
 import { MilitaryUpgrade } from "../../interfaces/militaryUpgrade";
-import { CounterDamage } from "../../interfaces/counterDamage";
 
-const counter: CounterDamage = {
-    units: [],
-    damage: 0,
-}
-
-export const Spearman: BaseUnit = {
-    name: 'Spearman',
+export const Knight: BaseUnit = {
+    name: 'Knight',
     cost: [
         {
             type: ResourceEnum.FOOD,
-            amount: 50,
-        }, {
+            amount: 60,
+        },
+        {
             type: ResourceEnum.GOLD,
-            amount: 20,
+            amount: 75,
         }
     ],
-    queueTime: 21,
-    counterDamage: counter,
+    queueTime: 30,
     range: 1,
-    speed: 3,
+    speed: 5,
 
     ageRequirement: null,
     level: 0,
     baseDamage: 0,
     hp: 0,
     upgrade: null,
+    structureDamage: 0,
+    counterDamage: null,
 }
 
-export const Spearman_4: typeof Spearman = {
-    ...Spearman,
-    ageRequirement: AgeEnum.AGE_4,
-    level: 4,
+export const Knight_2: typeof Knight = {
+    ...Knight,
+    ageRequirement: AgeEnum.IMPERIAL,
+    level: 2,
     baseDamage: 12,
-    hp: 65,
+    hp: 120,
     upgrade: null,
 }
 
-const SpearmanUpgrade_3: MilitaryUpgrade = {
-    unit: Spearman_4,
-    ageRequirement: AgeEnum.AGE_4,
+const KnightUpgrade_1: MilitaryUpgrade = {
+    unit: Knight_2,
+    ageRequirement: AgeEnum.IMPERIAL,
     cost: [
         {
             type: ResourceEnum.FOOD,
-            amount: 200,
+            amount: 300,
         }, {
             type: ResourceEnum.GOLD,
-            amount: 100,
+            amount: 300,
         }
     ],
-    queueTime: 45,
+    queueTime: 80,
 }
 
-export const Spearman_3: typeof Spearman = {
-    ...Spearman,
-    ageRequirement: AgeEnum.AGE_3,
-    level: 3,
-    baseDamage: 9,
-    hp: 60,
-    upgrade: SpearmanUpgrade_3,
-}
-
-const SpearmanUpgrade_2: MilitaryUpgrade = {
-    unit: Spearman_3,
-    ageRequirement: AgeEnum.AGE_3,
-    cost: [
-        {
-            type: ResourceEnum.FOOD,
-            amount: 150,
-        }, {
-            type: ResourceEnum.GOLD,
-            amount: 65,
-        }
-    ],
-    queueTime: 40,
-}
-
-export const Spearman_2: typeof Spearman = {
-    ...Spearman,
-    ageRequirement: AgeEnum.AGE_2,
-    level: 2,
-    baseDamage: 6,
-    hp: 45,
-    upgrade: SpearmanUpgrade_2,
-}
-
-const SpearmanUpgrade_1: MilitaryUpgrade = {
-    unit: Spearman_2,
-    ageRequirement: AgeEnum.AGE_2,
-    cost: [
-        {
-            type: ResourceEnum.FOOD,
-            amount: 100,
-        }, {
-            type: ResourceEnum.GOLD,
-            amount: 40,
-        }
-    ],
-    queueTime: 40,
-}
-
-export const Spearman_1: typeof Spearman = {
-    ...Spearman,
-    ageRequirement: AgeEnum.AGE_1,
+export const Knight_1: typeof Knight = {
+    ...Knight,
+    ageRequirement: AgeEnum.CASTLE,
     level: 1,
-    baseDamage: 4,
-    hp: 40,
-    upgrade: SpearmanUpgrade_1,
+    baseDamage: 10,
+    hp: 100,
+    upgrade: KnightUpgrade_1,
 }
