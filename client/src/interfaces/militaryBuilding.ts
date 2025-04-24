@@ -4,6 +4,6 @@ import { BaseUnit } from "./unit";
 
 export interface MilitaryBuilding extends BaseBuilding {
     type: MilitaryBuildingEnum;
-    units: [BaseUnit];
+    units: BaseUnit[];
     damage: number;
 }

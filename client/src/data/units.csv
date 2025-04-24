@@ -1,12 +1,12 @@
 Unit,Hit Point,Base Damage,Counter Damage,Range,Speed
-Militia,8,3,N/A,1,2
-Spearman,5,1,"""+2 Scout, Cavalry Archer, Knight""",1,2
-Archer,3,2,"""+1 Spearman, -1 Siege Ram, Trebuchet""",3,1
-Skirmisher,3,1,"""+2 Archer, -1 Siege Ram, Trebuchet""",3,1
-Cavalry Archer,4,2,"""-1 Siege Ram, Trebuchet""",3,4
-Scout,5,1,N/A,1,4
-Knight,10,4,N/A,1,4
-Camel,8,2,"""+3 Scout, Cavalry Archer, Knight, Elephant""",1,4
-Elephant,20,1,"""+4 Militia, +2 Scout, Cavalry Archer, Knight""",1,1
+Militia,8,3,N/A,1,3
+Spearman,5,1,"""+2 Scout, Cavalry Archer, Knight""",1,3
+Archer,3,2,"""+1 Spearman, -1 Siege Ram, Trebuchet""",3,2
+Skirmisher,3,1,"""+2 Archer, -1 Siege Ram, Trebuchet""",3,2
+Cavalry Archer,4,2,"""-1 Siege Ram, Trebuchet""",3,5
+Scout,5,1,N/A,1,5
+Knight,10,4,N/A,1,5
+Camel,8,2,"""+3 Scout, Cavalry Archer, Knight, Elephant""",1,5
+Elephant,20,1,"""+4 Militia, +2 Scout, Cavalry Archer, Knight""",1,2
 Siege Ram,30,1,"""+10 Building""",1,1
 Trebuchet,20,1,"""+20 Building""",5,1

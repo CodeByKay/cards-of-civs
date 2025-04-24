@@ -1,23 +1,21 @@
 import { AgeEnum } from "../enum/ageEnum";
 import { ResourceEnum } from "../enum/resourcesEnum";
+import { CounterDamage } from "./counterDamage";
 import { Upgrade } from "./upgrade";
 
 export interface BaseUnit {
     name: string;
-    ageRequirement: AgeEnum;
+    ageRequirement: AgeEnum | null;
     cost: {
         type: ResourceEnum;
         amount: number;
     }[];
     hp: number;
     queueTime: number;
-    upgrades: [Upgrade];
+    upgrade: Upgrade | null;
     level: number;
     baseDamage: number;
-    counterDamage: {
-        unit: BaseUnit;
-        damage: number;
-    }[];
+    counterDamage: CounterDamage | null;
     range: number;
     speed: number;
 }

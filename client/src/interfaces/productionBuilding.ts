@@ -4,5 +4,5 @@ import { Upgrade } from "./upgrade";
 
 export interface ProductionBuilding extends BaseBuilding {
     type: ResourceEnum;
-    upgrades: [Upgrade];
+    upgrade: Upgrade;
 }
