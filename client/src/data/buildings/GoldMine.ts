@@ -33,5 +33,5 @@ export const GoldMine: ProductionBuilding = {
     queueTime: 35,
 
     type: ResourceEnum.GOLD,
-    upgrade: GoldUpgrade,
+    upgrade: [GoldUpgrade],
 }

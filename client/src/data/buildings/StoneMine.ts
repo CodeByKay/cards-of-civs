@@ -33,5 +33,5 @@ export const StoneMine: ProductionBuilding = {
     queueTime: 35,
 
     type: ResourceEnum.STONE,
-    upgrade: StoneUpgrade,
+    upgrade: [StoneUpgrade],
 }
