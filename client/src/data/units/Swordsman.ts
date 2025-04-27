@@ -1,20 +1,13 @@
 import { BaseUnit } from "../../interfaces/unit";
-import { BaseBuilding } from "../../interfaces/building";
 import { AgeEnum } from "../../enum/ageEnum";
-import { ResourceEnum } from "../../enum/resourcesEnum";
-import { MilitaryUpgrade } from "../../interfaces/militaryUpgrade";
+import { MilitaryUpgrade } from "../../interfaces/military";
 
 export const Swordsman: BaseUnit = {
     name: 'Swordsman',
-    cost: [
-        {
-            type: ResourceEnum.FOOD,
-            amount: 50,
-        }, {
-            type: ResourceEnum.GOLD,
-            amount: 20,
-        }
-    ],
+    cost: {
+        food: 50,
+        gold: 20,
+    },
     queueTime: 21,
     range: 1,
     speed: 3,
@@ -25,7 +18,7 @@ export const Swordsman: BaseUnit = {
     hp: 0,
     upgrade: null,
     structureDamage: 0,
-    counterDamage: null,
+    counterDamage: [],
 }
 
 export const Swordsman_4: typeof Swordsman = {
@@ -41,15 +34,10 @@ export const Swordsman_4: typeof Swordsman = {
 const SwordsmanUpgrade_3: MilitaryUpgrade = {
     unit: Swordsman_4,
     ageRequirement: AgeEnum.IMPERIAL,
-    cost: [
-        {
-            type: ResourceEnum.FOOD,
-            amount: 200,
-        }, {
-            type: ResourceEnum.GOLD,
-            amount: 100,
-        }
-    ],
+    cost: {
+        food: 200,
+        gold: 100,
+    },
     queueTime: 45,
 }
 
@@ -66,15 +54,10 @@ export const Swordsman_3: typeof Swordsman = {
 const SwordsmanUpgrade_2: MilitaryUpgrade = {
     unit: Swordsman_3,
     ageRequirement: AgeEnum.CASTLE,
-    cost: [
-        {
-            type: ResourceEnum.FOOD,
-            amount: 150,
-        }, {
-            type: ResourceEnum.GOLD,
-            amount: 65,
-        }
-    ],
+    cost: {
+        food: 150,
+        gold: 65,
+    },
     queueTime: 40,
 }
 
@@ -91,15 +74,10 @@ export const Swordsman_2: typeof Swordsman = {
 const SwordsmanUpgrade_1: MilitaryUpgrade = {
     unit: Swordsman_2,
     ageRequirement: AgeEnum.FEUDAL,
-    cost: [
-        {
-            type: ResourceEnum.FOOD,
-            amount: 100,
-        }, {
-            type: ResourceEnum.GOLD,
-            amount: 40,
-        }
-    ],
+    cost: {
+        food: 100,
+        gold: 40,
+    },
     queueTime: 40,
 }
 

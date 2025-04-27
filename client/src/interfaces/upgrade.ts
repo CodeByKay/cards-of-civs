@@ -1,11 +1,8 @@
 import { AgeEnum } from "../enum/ageEnum";
-import { ResourceEnum } from "../enum/resourcesEnum";
+import { Cost } from "./cost";
 
 export interface Upgrade {
     ageRequirement: AgeEnum;
-    cost: {
-        type: ResourceEnum;
-        amount: number;
-    }[];
+    cost: Cost;
     queueTime: number;
 }

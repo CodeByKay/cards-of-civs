@@ -1,13 +1,10 @@
 import { AgeEnum } from "../enum/ageEnum";
-import { ResourceEnum } from "../enum/resourcesEnum";
+import { Cost } from "./cost";
 
 export interface BaseBuilding {
   name: string;
   ageRequirement: AgeEnum;
-  cost: {
-    type: ResourceEnum;
-    amount: number;
-  }[];
+  cost: Cost;
   baseHp: number;
   wallHpBonus: number;
   queueTime: number;

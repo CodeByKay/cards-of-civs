@@ -1,21 +1,13 @@
 import { BaseUnit } from "../../interfaces/unit";
 import { AgeEnum } from "../../enum/ageEnum";
-import { ResourceEnum } from "../../enum/resourcesEnum";
-import { MilitaryUpgrade } from "../../interfaces/militaryUpgrade";
-import { CavalryArcher, Camel, Knight, Scout } from "../indexUnits";
+import { MilitaryUpgrade } from "../../interfaces/military";
 
 export const Elephant: BaseUnit = {
     name: 'Elephant',
-    cost: [
-        {
-            type: ResourceEnum.FOOD,
-            amount: 100,
-        },
-        {
-            type: ResourceEnum.GOLD,
-            amount: 70,
-        }
-    ],
+    cost: {
+        food: 100,
+        gold: 70,
+    },
     queueTime: 24,
     range: 1,
     speed: 2,
@@ -26,7 +18,7 @@ export const Elephant: BaseUnit = {
     hp: 0,
     upgrade: null,
     structureDamage: 0,
-    counterDamage: null,
+    counterDamage: [],
 }
 
 export const Elephant_2: typeof Elephant = {
@@ -42,15 +34,10 @@ export const Elephant_2: typeof Elephant = {
 const ElephantUpgrade_1: MilitaryUpgrade = {
     unit: Elephant_2,
     ageRequirement: AgeEnum.IMPERIAL,
-    cost: [
-        {
-            type: ResourceEnum.FOOD,
-            amount: 1100,
-        }, {
-            type: ResourceEnum.GOLD,
-            amount: 700,
-        }
-    ],
+    cost: {
+        food: 1100,
+        gold: 700,
+    },
     queueTime: 100,
 }
 

@@ -1,16 +1,12 @@
 import { BaseUnit } from "../../interfaces/unit";
 import { AgeEnum } from "../../enum/ageEnum";
-import { ResourceEnum } from "../../enum/resourcesEnum";
-import { MilitaryUpgrade } from "../../interfaces/militaryUpgrade";
+import { MilitaryUpgrade } from "../../interfaces/military";
 
 export const Scout: BaseUnit = {
     name: 'Scout',
-    cost: [
-        {
-            type: ResourceEnum.FOOD,
-            amount: 80,
-        }
-    ],
+    cost: {
+        food: 80,
+    },
     queueTime: 30,
     range: 1,
     speed: 5,
@@ -21,7 +17,7 @@ export const Scout: BaseUnit = {
     hp: 0,
     upgrade: null,
     structureDamage: 0,
-    counterDamage: null,
+    counterDamage: [],
 }
 
 export const Scout_3: typeof Scout = {
@@ -36,15 +32,10 @@ export const Scout_3: typeof Scout = {
 const ScoutUpgrade_2: MilitaryUpgrade = {
     unit: Scout_3,
     ageRequirement: AgeEnum.IMPERIAL,
-    cost: [
-        {
-            type: ResourceEnum.FOOD,
-            amount: 500,
-        }, {
-            type: ResourceEnum.GOLD,
-            amount: 600,
-        }
-    ],
+    cost: {
+        food: 500,
+        gold: 600,
+    },
     queueTime: 50,
 }
 
@@ -60,15 +51,10 @@ export const Scout_2: typeof Scout = {
 const ScoutUpgrade_1: MilitaryUpgrade = {
     unit: Scout_2,
     ageRequirement: AgeEnum.CASTLE,
-    cost: [
-        {
-            type: ResourceEnum.FOOD,
-            amount: 150,
-        }, {
-            type: ResourceEnum.GOLD,
-            amount: 50,
-        }
-    ],
+    cost: {
+        food: 150,
+        gold: 50,
+    },
     queueTime: 45,
 }
 

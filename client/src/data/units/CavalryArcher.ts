@@ -1,20 +1,14 @@
 import { BaseUnit } from "../../interfaces/unit";
 import { AgeEnum } from "../../enum/ageEnum";
-import { ResourceEnum } from "../../enum/resourcesEnum";
-import { MilitaryUpgrade } from "../../interfaces/militaryUpgrade";
+import { MilitaryUpgrade } from "../../interfaces/military";
 import { Spearman } from "../indexUnits";
 
 export const CavalryArcher: BaseUnit = {
     name: 'CavalryArcher',
-    cost: [
-        {
-            type: ResourceEnum.WOOD,
-            amount: 40,
-        }, {
-            type: ResourceEnum.GOLD,
-            amount: 60,
-        }
-    ],
+    cost: {
+        wood: 40,
+        gold: 60,
+    },
     queueTime: 37,
     range: 3,
     speed: 5,
@@ -25,7 +19,7 @@ export const CavalryArcher: BaseUnit = {
     hp: 0,
     upgrade: null,
     structureDamage: 0,
-    counterDamage: null,
+    counterDamage: [],
 }
 
 export const CavalryArcher_2: typeof CavalryArcher = {
@@ -35,28 +29,21 @@ export const CavalryArcher_2: typeof CavalryArcher = {
     baseDamage: 7,
     hp: 60,
     upgrade: null,
-    counterDamage: {
-        counters: [
-            {
-                unit: Spearman,
-                damage: 4
-            }
-        ]  
-    },
+    counterDamage: [
+        {
+            unit: Spearman,
+            damage: 4
+        }
+    ],
 }
 
 const CavalryArcherUpgrade_1: MilitaryUpgrade = {
     unit: CavalryArcher_2,
     ageRequirement: AgeEnum.IMPERIAL,
-    cost: [
-        {
-            type: ResourceEnum.FOOD,
-            amount: 900,
-        }, {
-            type: ResourceEnum.GOLD,
-            amount: 500,
-        }
-    ],
+    cost: {
+        food: 900,
+        gold: 500,
+    },
     queueTime: 55,
 }
 
@@ -67,12 +54,10 @@ export const CavalryArcher_1: typeof CavalryArcher = {
     baseDamage: 6,
     hp: 50,
     upgrade: CavalryArcherUpgrade_1,
-    counterDamage: {
-        counters: [
-            {
-                unit: Spearman,
-                damage: 2
-            }, 
-        ]  
-    },
+    counterDamage: [
+        {
+            unit: Spearman,
+            damage: 2
+        }, 
+    ],
 }

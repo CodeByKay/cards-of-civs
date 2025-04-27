@@ -1,31 +1,46 @@
-import { Action } from './ActionQueue';
-import { MilitaryUnit } from './MilitaryQueue';
-import { ResourceBuilding } from '../interfaces/building';
-import { Villager } from '../interfaces/unitGroup';
-import { GameState } from './GameState';
+import { MilitaryBuilding } from "../interfaces/military";
+import { Production } from "../interfaces/production";
+import { TownCenterBuilding } from "../interfaces/townCenterBuilding";
+import { UnitGroup } from "../interfaces/unit";
+import { Action } from "../interfaces/action";
+import { AgeEnum } from "../enum/ageEnum";
+import { TownCenter } from "../data/indexBuildings";
 
-export interface PlayerState {
-  // Add properties here to track the player's state
-  // For example:
-  // actionQueue: Action[];
-  // militaryQueue: MilitaryUnit[];
-  // resources: number;
-  // buildings: ResourceBuilding[];
-  // units: Villager[];
+export class Player {
+  name: string;
+
+  age: AgeEnum;
+  food: number;
+  wood: number;
+  gold: number;
+  stone: number;
+
+  townCenter: TownCenterBuilding;
+  foodProduction: Production;
+  woodProduction: Production;
+  goldProduction: Production;
+  stoneProduction: Production;
+
+  militaryBuildings: MilitaryBuilding[];
+  army: UnitGroup[];
+
+  actionQueue: Action[];
+  militaryQueue: Action[];
+  processArray: Action[];
+
+  constructor(name: string) {
+    this.name = name;
+
+    this.age = AgeEnum.DARK;
+    this.food = 200;
+    this.wood = 200;
+    this.gold = 200;
+    this.stone = 200;
+
+    this.townCenter = TownCenter;
+    this.foodProduction = {} = this.foodProduction;
+    this.militaryBuildings = [];
+  }
+
+
 }
-
-// Define functions to manipulate the PlayerState
-export function addToActionQueue(action: Action) {
-  // Add logic to add an action to the action queue
-}
-
-export function addToMilitaryQueue(unit: MilitaryUnit) {
-  // Add logic to add a unit to the military queue
-}
-
-// Add more functions as needed
-
-// Export the PlayerState module
-export default {
-  // Export the PlayerState interface and functions here
-};

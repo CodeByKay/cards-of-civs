@@ -1,37 +1,45 @@
 import { AgeEnum } from "../../enum/ageEnum";
-import { ResourceEnum } from "../../enum/resourcesEnum";
-import { ProductionBuilding } from "../../interfaces/productionBuilding";
-import { ProductionUpgrade } from "../../interfaces/productionUpgrade";
+import { ProductionBuilding, ProductionUpgrade } from "../../interfaces/production";
 
-const GoldUpgrade: ProductionUpgrade = {
-    productionMultiplier: 1.5,
+const GoldUpgrade_1: ProductionUpgrade = {
+    productionMultiplier: 1.1,
     ageRequirement: AgeEnum.FEUDAL,
-    cost: [
-        {
-            type: ResourceEnum.FOOD,
-            amount: 100,
-        },
-        {
-            type: ResourceEnum.WOOD,
-            amount: 75,
-        },
-    ],
+    cost: {
+        food: 100,
+        wood: 75,
+    },
     queueTime: 30,
+}
+
+const GoldUpgrade_2: ProductionUpgrade = {
+    productionMultiplier: 1.25,
+    ageRequirement: AgeEnum.CASTLE,
+    cost: {
+        food: 175,
+        wood: 100,
+    },
+    queueTime: 75,
+}
+
+const GoldUpgrade_3: ProductionUpgrade = {
+    productionMultiplier: 1.5,
+    ageRequirement: AgeEnum.IMPERIAL,
+    cost: {
+        food: 275,
+        wood: 150,
+    },
+    queueTime: 125,
 }
 
 export const GoldMine: ProductionBuilding = {
     name: 'Gold Mine',
     ageRequirement: AgeEnum.DARK,
-    cost: [
-        {
-            type: ResourceEnum.WOOD,
-            amount: 100,
-        }
-    ],
+    cost: {
+        wood: 100,
+    },
     baseHp: 600,
     wallHpBonus: 0,
     queueTime: 35,
 
-    type: ResourceEnum.GOLD,
-    upgrade: [GoldUpgrade],
+    upgrade: [GoldUpgrade_1, GoldUpgrade_2, GoldUpgrade_3],
 }

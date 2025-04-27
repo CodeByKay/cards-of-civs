@@ -1,14 +1,11 @@
-// Type unit | building | upgrade
-// Building association for unit and upgrade, if building is missing, drop.
-// Cost, to be removed on queue. To be returned on cancel
-// Queue time
-
-import { ActionEnum } from "../enum/actionEnum";
+import { Cost } from "./cost";
 import { BaseBuilding } from "./building";
 
 export interface Action {
-    type: ActionEnum;
-    timeRemaining: number;
+    description: string;
+    totalTime: number;
+    remainingTime: number;
     originBuilding: BaseBuilding;
-    note: string;
-  }
+    cost: Cost;
+    action(): boolean;
+}

@@ -1,20 +1,14 @@
 import { BaseUnit } from "../../interfaces/unit";
 import { AgeEnum } from "../../enum/ageEnum";
-import { ResourceEnum } from "../../enum/resourcesEnum";
-import { MilitaryUpgrade } from "../../interfaces/militaryUpgrade";
+import { MilitaryUpgrade } from "../../interfaces/military";
 import { Spearman } from "../indexUnits";
 
 export const Archer: BaseUnit = {
     name: 'Archer',
-    cost: [
-        {
-            type: ResourceEnum.WOOD,
-            amount: 25,
-        }, {
-            type: ResourceEnum.GOLD,
-            amount: 45,
-        }
-    ],
+    cost: {
+        wood: 25,
+        gold: 45,
+    },
     queueTime: 35,
     range: 3,
     speed: 2,
@@ -25,7 +19,7 @@ export const Archer: BaseUnit = {
     hp: 0,
     upgrade: null,
     structureDamage: 0,
-    counterDamage: null,
+    counterDamage: [],
 }
 
 export const Archer_3: typeof Archer = {
@@ -35,28 +29,21 @@ export const Archer_3: typeof Archer = {
     baseDamage: 6,
     hp: 40,
     upgrade: null,
-    counterDamage: {
-        counters: [
-            {
-                unit: Spearman,
-                damage: 3
-            } 
-        ]  
-    },
+    counterDamage: [
+        {
+            unit: Spearman,
+            damage: 3
+        } 
+    ],
 }
 
 const ArcherUpgrade_2: MilitaryUpgrade = {
     unit: Archer_3,
     ageRequirement: AgeEnum.IMPERIAL,
-    cost: [
-        {
-            type: ResourceEnum.FOOD,
-            amount: 450,
-        }, {
-            type: ResourceEnum.GOLD,
-            amount: 350,
-        }
-    ],
+    cost: {
+        food: 450,
+        gold: 300,
+    },
     queueTime: 50,
 }
 
@@ -67,28 +54,21 @@ export const Archer_2: typeof Archer = {
     baseDamage: 5,
     hp: 35,
     upgrade: ArcherUpgrade_2,
-    counterDamage: {
-        counters: [
-            {
-                unit: Spearman,
-                damage: 3
-            }
-        ]  
-    },
+    counterDamage: [
+        {
+            unit: Spearman,
+            damage: 3
+        }
+    ],
 }
 
 const ArcherUpgrade_1: MilitaryUpgrade = {
     unit: Archer_2,
     ageRequirement: AgeEnum.CASTLE,
-    cost: [
-        {
-            type: ResourceEnum.FOOD,
-            amount: 175,
-        }, {
-            type: ResourceEnum.GOLD,
-            amount: 100,
-        }
-    ],
+    cost: {
+        food: 175,
+        gold: 100,
+    },
     queueTime: 35,
 }
 
@@ -99,12 +79,10 @@ export const Archer_1: typeof Archer = {
     baseDamage: 4,
     hp: 30,
     upgrade: ArcherUpgrade_1,
-    counterDamage: {
-        counters: [
-            {
-                unit: Spearman,
-                damage: 3
-            }, 
-        ]  
-    },
+    counterDamage: [
+        {
+            unit: Spearman,
+            damage: 3
+        }, 
+    ],
 }
