@@ -1,7 +1,9 @@
 import { BaseUnit } from "../../interfaces/unit";
 import { AgeEnum } from "../../enum/ageEnum";
+import { UnitEnum } from "../../enum/unitEnum";
 
 export const Trebuchet: BaseUnit = {
+    unitEnum: UnitEnum.TREBUCHET,
     name: 'Trebuchet',
     cost: {
         wood: 200,

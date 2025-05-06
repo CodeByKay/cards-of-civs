@@ -2,17 +2,19 @@ import { UnitGroup } from "./unit";
 import { BaseBuilding } from "./building";
 import { Upgrade } from "./upgrade";
 
+
+
 export interface Production {
     villagers: UnitGroup;
     productionRate: number;
-    productionUpgrade: ProductionUpgrade;
-    productionBuilding: ProductionBuilding;
+    productionBuilding?: ProductionBuilding;
 }
 
 export interface ProductionBuilding extends BaseBuilding {
-    upgrade: Upgrade[];
+    upgrade: ProductionUpgrade[];
 }
 
 export interface ProductionUpgrade extends Upgrade {
     productionMultiplier: number;
 }
+

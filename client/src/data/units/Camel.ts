@@ -1,10 +1,11 @@
 import { BaseUnit } from "../../interfaces/unit";
 import { AgeEnum } from "../../enum/ageEnum";
 import { MilitaryUpgrade } from "../../interfaces/military";
-import { CavalryArcher, Elephant, Knight, Scout } from "../indexUnits";
+import { UnitEnum } from "../../enum/unitEnum";
 
 export const Camel: BaseUnit = {
     name: 'Camel',
+    unitEnum: UnitEnum.CAMEL,
     cost: {
         food: 55,
         gold: 60,
@@ -31,19 +32,19 @@ export const Camel_2: typeof Camel = {
     upgrade: null,
     counterDamage: [
         {
-            unit: Scout,
+            unitEnum: UnitEnum.SCOUT,
             damage: 18
         }, {
-            unit: Knight,
+            unitEnum: UnitEnum.KNIGHT,
             damage: 18
         }, {
-            unit: CavalryArcher,
+            unitEnum: UnitEnum.CAVALRY_ARCHER,
             damage: 18
         }, {
-            unit: Camel,
+            unitEnum: UnitEnum.CAMEL,
             damage: 9
         }, {
-            unit: Elephant,
+            unitEnum: UnitEnum.ELEPHANT,
             damage: 18
         }  
     ],
@@ -68,19 +69,19 @@ export const Camel_1: typeof Camel = {
     upgrade: CamelUpgrade_1,
     counterDamage: [
         {
-            unit: Scout,
+            unitEnum: UnitEnum.SCOUT,
             damage: 9
         }, {
-            unit: Knight,
+            unitEnum: UnitEnum.KNIGHT,
             damage: 9
         }, {
-            unit: CavalryArcher,
+            unitEnum: UnitEnum.CAVALRY_ARCHER,
             damage: 9
         }, {
-            unit: Camel,
+            unitEnum: UnitEnum.CAMEL,
             damage: 5
         }, {
-            unit: Elephant,
+            unitEnum: UnitEnum.ELEPHANT,
             damage: 9
         }  
     ],

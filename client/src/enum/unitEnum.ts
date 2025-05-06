@@ -1,0 +1,14 @@
+export enum UnitEnum {
+    ARCHER,
+    CAMEL,
+    CAVALRY_ARCHER,
+    ELEPHANT,
+    KNIGHT,
+    SCOUT,
+    SIEGE_RAM,
+    SKIRMISHER,
+    SPEARMAN,
+    SWORDSMAN,
+    TREBUCHET,
+    VILLAGER
+}

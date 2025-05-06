@@ -1,9 +1,11 @@
 import { BaseUnit } from "../../interfaces/unit";
 import { AgeEnum } from "../../enum/ageEnum";
 import { MilitaryUpgrade } from "../../interfaces/military";
+import { UnitEnum } from "../../enum/unitEnum";
 
 export const Knight: BaseUnit = {
     name: 'Knight',
+    unitEnum: UnitEnum.KNIGHT,
     cost: {
         food: 60,
         gold: 75,

@@ -1,9 +1,11 @@
 import { BaseUnit } from "../../interfaces/unit";
 import { AgeEnum } from "../../enum/ageEnum";
 import { MilitaryUpgrade } from "../../interfaces/military";
+import { UnitEnum } from "../../enum/unitEnum";
 
 export const Elephant: BaseUnit = {
     name: 'Elephant',
+    unitEnum: UnitEnum.ELEPHANT,
     cost: {
         food: 100,
         gold: 70,

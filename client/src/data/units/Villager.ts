@@ -1,8 +1,10 @@
 import { BaseUnit } from "../../interfaces/unit";
 import { AgeEnum } from "../../enum/ageEnum";
+import { UnitEnum } from "../../enum/unitEnum";
 
 export const Villager: BaseUnit = {
     name: 'Villager',
+    unitEnum: UnitEnum.VILLAGER,
     cost: {
         food: 50,
     },

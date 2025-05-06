@@ -1,11 +1,9 @@
-// Process actions from queue, remove actions if canceled
+import { CivilizationAction } from "../actions/civilizationActions";
 
-// Actions can be:
-// Generate units
-// Age up
-// Build production
-// Build military
-// Upgrade production
-// Upgrade military
-// Build walls
+export class ActionQueue {
+    queue: CivilizationAction[];
 
+    constructor() {
+        this.queue = [];
+    }
+}

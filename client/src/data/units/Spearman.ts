@@ -1,10 +1,11 @@
 import { BaseUnit } from "../../interfaces/unit";
 import { AgeEnum } from "../../enum/ageEnum";
 import { MilitaryUpgrade } from "../../interfaces/military";
-import { Camel, CavalryArcher, Elephant, Knight, Scout } from "../indexUnits";
+import { UnitEnum } from "../../enum/unitEnum";
 
 export const Spearman: BaseUnit = {
     name: 'Spearman',
+    unitEnum: UnitEnum.SPEARMAN,
     cost: {
         food: 35,
         wood: 20,
@@ -31,19 +32,23 @@ export const Spearman_3: typeof Spearman = {
     upgrade: null,
     counterDamage: [
         {
-            unit: Scout,
+            unitEnum: UnitEnum.SCOUT,
             damage: 32
-        }, {
-            unit: Knight,
+        }, 
+        {
+            unitEnum: UnitEnum.KNIGHT,
             damage: 32
-        }, {
-            unit: CavalryArcher,
+        }, 
+        {
+            unitEnum: UnitEnum.CAVALRY_ARCHER,
             damage: 32
-        }, {
-            unit: Camel,
+        }, 
+        {
+            unitEnum: UnitEnum.CAMEL,
             damage: 26
-        }, {
-            unit: Elephant,
+        }, 
+        {
+            unitEnum: UnitEnum.ELEPHANT,
             damage: 28
         }  
     ],
@@ -68,19 +73,23 @@ export const Spearman_2: typeof Spearman = {
     upgrade: SpearmanUpgrade_2,
     counterDamage: [
         {
-            unit: Scout,
+            unitEnum: UnitEnum.SCOUT,
             damage: 22
-        }, {
-            unit: Knight,
+        }, 
+        {
+            unitEnum: UnitEnum.KNIGHT,
             damage: 22
-        }, {
-            unit: CavalryArcher,
+        }, 
+        {
+            unitEnum: UnitEnum.CAVALRY_ARCHER,
             damage: 22
-        }, {
-            unit: Camel,
+        }, 
+        {
+            unitEnum: UnitEnum.CAMEL,
             damage: 18
-        }, {
-            unit: Elephant,
+        }, 
+        {
+            unitEnum: UnitEnum.ELEPHANT,
             damage: 25
         }  
     ],
@@ -105,19 +114,23 @@ export const Spearman_1: typeof Spearman = {
     upgrade: SpearmanUpgrade_1,
     counterDamage: [
         {
-            unit: Scout,
+            unitEnum: UnitEnum.SCOUT,
             damage: 15
-        }, {
-            unit: Knight,
+        },  
+        {
+            unitEnum: UnitEnum.KNIGHT,
             damage: 15
-        }, {
-            unit: CavalryArcher,
+        }, 
+        {
+            unitEnum: UnitEnum.CAVALRY_ARCHER,
             damage: 15
-        }, {
-            unit: Camel,
+        }, 
+        {
+            unitEnum: UnitEnum.CAMEL,
             damage: 12
-        }, {
-            unit: Elephant,
+        }, 
+        {
+            unitEnum: UnitEnum.ELEPHANT,
             damage: 15
         }  
     ],

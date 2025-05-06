@@ -1,10 +1,11 @@
 import { BaseUnit } from "../../interfaces/unit";
 import { AgeEnum } from "../../enum/ageEnum";
 import { MilitaryUpgrade } from "../../interfaces/military";
-import { Spearman } from "../indexUnits";
+import { UnitEnum } from "../../enum/unitEnum";
 
 export const CavalryArcher: BaseUnit = {
-    name: 'CavalryArcher',
+    name: 'Cavalry Archer',
+    unitEnum: UnitEnum.CAVALRY_ARCHER,
     cost: {
         wood: 40,
         gold: 60,
@@ -31,7 +32,7 @@ export const CavalryArcher_2: typeof CavalryArcher = {
     upgrade: null,
     counterDamage: [
         {
-            unit: Spearman,
+            unitEnum: UnitEnum.SPEARMAN,
             damage: 4
         }
     ],
@@ -56,8 +57,8 @@ export const CavalryArcher_1: typeof CavalryArcher = {
     upgrade: CavalryArcherUpgrade_1,
     counterDamage: [
         {
-            unit: Spearman,
+            unitEnum: UnitEnum.SPEARMAN,
             damage: 2
-        }, 
+        }
     ],
 }

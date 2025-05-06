@@ -1,10 +1,11 @@
 import { BaseUnit } from "../../interfaces/unit";
 import { AgeEnum } from "../../enum/ageEnum";
 import { MilitaryUpgrade } from "../../interfaces/military";
-import { Trebuchet } from "../indexUnits";
+import { UnitEnum } from "../../enum/unitEnum";
 
 export const SiegeRam: BaseUnit = {
-    name: 'SiegeRam',
+    name: 'Siege Ram',
+    unitEnum: UnitEnum.SIEGE_RAM,
     cost: {
         wood: 160,
         gold: 75,
@@ -32,11 +33,11 @@ export const SiegeRam_2: typeof SiegeRam = {
     structureDamage: 160,
     counterDamage: [
         {
-            unit: SiegeRam,
+            unitEnum: UnitEnum.SIEGE_RAM,
             damage: 50,
         },
         {
-            unit: Trebuchet,
+            unitEnum: UnitEnum.TREBUCHET,
             damage: 50,
         }
     ],
@@ -61,11 +62,11 @@ export const SiegeRam_1: typeof SiegeRam = {
     structureDamage: 150,
     counterDamage: [
         {
-            unit: SiegeRam,
+            unitEnum: UnitEnum.SIEGE_RAM,
             damage: 40,
         },
         {
-            unit: Trebuchet,
+            unitEnum: UnitEnum.TREBUCHET,
             damage: 40,
         }
     ],

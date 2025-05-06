@@ -1,6 +1,6 @@
-import { BaseUnit } from "./unit";
+import { UnitEnum } from "../enum/unitEnum";
 
 export interface CounterDamage {
-    unit: BaseUnit;
+    unitEnum: UnitEnum;
     damage: number;
 }

@@ -1,10 +1,11 @@
 import { BaseUnit } from "../../interfaces/unit";
 import { AgeEnum } from "../../enum/ageEnum";
 import { MilitaryUpgrade } from "../../interfaces/military";
-import { Archer, CavalryArcher, Spearman } from "../indexUnits";
+import { UnitEnum } from "../../enum/unitEnum";
 
 export const Skirmisher: BaseUnit = {
     name: 'Skirmisher',
+    unitEnum: UnitEnum.SKIRMISHER,
     cost: {
         food: 25,
         wood: 35,
@@ -31,15 +32,15 @@ export const Skirmisher_3: typeof Skirmisher = {
     upgrade: null,
     counterDamage: [
         {
-            unit: Spearman,
+            unitEnum: UnitEnum.SPEARMAN,
             damage: 4
         },
         {
-            unit: Archer,
+            unitEnum: UnitEnum.ARCHER,
             damage: 5
         },
         {
-            unit: CavalryArcher,
+            unitEnum: UnitEnum.CAVALRY_ARCHER,
             damage: 3
         }
     ],
@@ -64,15 +65,15 @@ export const Skirmisher_2: typeof Skirmisher = {
     upgrade: SkirmisherUpgrade_2,
     counterDamage: [
         {
-            unit: Spearman,
+            unitEnum: UnitEnum.SPEARMAN,
             damage: 4
         },
         {
-            unit: Archer,
+            unitEnum: UnitEnum.ARCHER,
             damage: 4
         },
         {
-            unit: CavalryArcher,
+            unitEnum: UnitEnum.CAVALRY_ARCHER,
             damage: 2
         }
     ],
@@ -97,12 +98,12 @@ export const Skirmisher_1: typeof Skirmisher = {
     upgrade: SkirmisherUpgrade_1,
     counterDamage: [
         {
-            unit: Spearman,
+            unitEnum: UnitEnum.ARCHER,
             damage: 3
         }, 
         {
-            unit: Archer,
+            unitEnum: UnitEnum.SPEARMAN,
             damage: 3
-        }, 
+        }
     ],
 }
