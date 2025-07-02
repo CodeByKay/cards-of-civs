@@ -9,8 +9,8 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import { AgeEnum } from "../../enum/ageEnum";
-import { UnitEnum } from "../../enum/unitEnum";
+import { AgeEnum } from "../../enum/ageEnum.js";
+import { UnitEnum } from "../../enum/unitEnum.js";
 export var Spearman = {
     name: 'Spearman',
     unitEnum: UnitEnum.SPEARMAN,
@@ -40,7 +40,7 @@ export var Spearman_3 = __assign(__assign({}, Spearman), { ageRequirement: AgeEn
         },
         {
             unitEnum: UnitEnum.CAVALRY_ARCHER,
-            damage: 32
+            damage: 15
         },
         {
             unitEnum: UnitEnum.CAMEL,
@@ -71,7 +71,7 @@ export var Spearman_2 = __assign(__assign({}, Spearman), { ageRequirement: AgeEn
         },
         {
             unitEnum: UnitEnum.CAVALRY_ARCHER,
-            damage: 22
+            damage: 12
         },
         {
             unitEnum: UnitEnum.CAMEL,
@@ -102,7 +102,7 @@ export var Spearman_1 = __assign(__assign({}, Spearman), { ageRequirement: AgeEn
         },
         {
             unitEnum: UnitEnum.CAVALRY_ARCHER,
-            damage: 15
+            damage: 10
         },
         {
             unitEnum: UnitEnum.CAMEL,

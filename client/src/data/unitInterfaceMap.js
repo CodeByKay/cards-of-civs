@@ -1,17 +1,17 @@
 var _a;
-import { UnitEnum } from '../enum/unitEnum';
-import { Archer } from './units/Archer';
-import { Camel } from './units/Camel';
-import { CavalryArcher } from './units/CavalryArcher';
-import { Elephant } from './units/Elephant';
-import { Knight } from './units/Knight';
-import { Scout } from './units/Scout';
-import { SiegeRam } from './units/SiegeRam';
-import { Skirmisher } from './units/Skirmisher';
-import { Spearman } from './units/Spearman';
-import { Swordsman } from './units/Swordsman';
-import { Trebuchet } from './units/Trebuchet';
-import { Villager } from './units/Villager';
+import { UnitEnum } from '../enum/unitEnum.js';
+import { Archer } from './units/Archer.js';
+import { Camel } from './units/Camel.js';
+import { CavalryArcher } from './units/CavalryArcher.js';
+import { Elephant } from './units/Elephant.js';
+import { Knight } from './units/Knight.js';
+import { Scout } from './units/Scout.js';
+import { SiegeRam } from './units/SiegeRam.js';
+import { Skirmisher } from './units/Skirmisher.js';
+import { Spearman } from './units/Spearman.js';
+import { Swordsman } from './units/Swordsman.js';
+import { Trebuchet } from './units/Trebuchet.js';
+import { Villager } from './units/Villager.js';
 export var UnitEnumToInterface = (_a = {},
     _a[UnitEnum.ARCHER] = Archer,
     _a[UnitEnum.CAMEL] = Camel,

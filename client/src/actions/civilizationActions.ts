@@ -1,6 +1,6 @@
-import { Action } from "../interfaces/action";
-import { ProductionBuilding } from "../interfaces/production";
-import { Cost } from "../interfaces/cost";
+import { Action } from "../interfaces/action.js";
+import { ProductionBuilding } from "../interfaces/production.js";
+import { Cost } from "../interfaces/cost.js";
 
 // Age Up
 // Generate Villagers

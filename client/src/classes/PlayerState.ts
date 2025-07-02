@@ -1,11 +1,11 @@
-import { MilitaryBuilding } from "../interfaces/military";
-import { Production } from "../interfaces/production";
-import { TownCenterBuilding } from "../interfaces/townCenterBuilding";
-import { generateUnitGroup, UnitGroup } from "../interfaces/unit";
-import { Action } from "../interfaces/action";
-import { AgeEnum } from "../enum/ageEnum";
-import { TownCenter } from "../data/indexBuildings";
-import { Villager } from "../data/indexUnits";
+import { MilitaryBuilding } from "../interfaces/military.js";
+import { Production } from "../interfaces/production.js";
+import { TownCenterBuilding } from "../interfaces/townCenterBuilding.js";
+import { generateUnitGroup, UnitGroup } from "../interfaces/unit.js";
+import { Action } from "../interfaces/action.js";
+import { AgeEnum } from "../enum/ageEnum.js";
+import { TownCenter } from "../data/indexBuildings.js";
+import { Villager } from "../data/indexUnits.js";
 
 export class Player {
     name: string;

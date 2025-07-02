@@ -1,5 +1,5 @@
-import { AgeEnum } from "../../enum/ageEnum";
-import { UnitEnum } from "../../enum/unitEnum";
+import { AgeEnum } from "../../enum/ageEnum.js";
+import { UnitEnum } from "../../enum/unitEnum.js";
 export var Trebuchet = {
     unitEnum: UnitEnum.TREBUCHET,
     name: 'Trebuchet',

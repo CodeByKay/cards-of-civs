@@ -9,8 +9,8 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import { AgeEnum } from "../../enum/ageEnum";
-import { UnitEnum } from "../../enum/unitEnum";
+import { AgeEnum } from "../../enum/ageEnum.js";
+import { UnitEnum } from "../../enum/unitEnum.js";
 export var SiegeRam = {
     name: 'Siege Ram',
     unitEnum: UnitEnum.SIEGE_RAM,

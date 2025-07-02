@@ -1,6 +1,6 @@
-import { Action } from "../interfaces/action";
-import { MilitaryBuilding } from "../interfaces/military";
-import { Cost } from "../interfaces/cost";
+import { Action } from "../interfaces/action.js";
+import { MilitaryBuilding } from "../interfaces/military.js";
+import { Cost } from "../interfaces/cost.js";
 
 // Generate Military
 // Upgrade Military

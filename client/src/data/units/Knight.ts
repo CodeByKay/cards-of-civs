@@ -1,7 +1,7 @@
-import { BaseUnit } from "../../interfaces/unit";
-import { AgeEnum } from "../../enum/ageEnum";
-import { MilitaryUpgrade } from "../../interfaces/military";
-import { UnitEnum } from "../../enum/unitEnum";
+import { BaseUnit } from "../../interfaces/unit.js";
+import { AgeEnum } from "../../enum/ageEnum.js";
+import { MilitaryUpgrade } from "../../interfaces/military.js";
+import { UnitEnum } from "../../enum/unitEnum.js";
 
 export const Knight: BaseUnit = {
     name: 'Knight',

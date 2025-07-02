@@ -1,12 +1,12 @@
-import { Barracks } from './buildings/Barracks';
-import { ArcheryRange } from './buildings/ArcheryRange';
-import { Stable } from './buildings/Stable';
-import { Castle } from './buildings/Castle';
-import { LumberCamp } from './buildings/LumberCamp';
-import { Mill } from './buildings/Mill';
-import { GoldMine } from './buildings/GoldMine';
-import { StoneMine } from './buildings/StoneMine';
-import { TownCenter } from './buildings/TownCenter';
+import { Barracks } from './buildings/Barracks.js';
+import { ArcheryRange } from './buildings/ArcheryRange.js';
+import { Stable } from './buildings/Stable.js';
+import { Castle } from './buildings/Castle.js';
+import { LumberCamp } from './buildings/LumberCamp.js';
+import { Mill } from './buildings/Mill.js';
+import { GoldMine } from './buildings/GoldMine.js';
+import { StoneMine } from './buildings/StoneMine.js';
+import { TownCenter } from './buildings/TownCenter.js';
 
 export {
     Barracks,

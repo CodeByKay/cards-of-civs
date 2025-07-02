@@ -1,7 +1,7 @@
-import { generateUnitGroup } from "../interfaces/unit";
-import { AgeEnum } from "../enum/ageEnum";
-import { TownCenter } from "../data/indexBuildings";
-import { Villager } from "../data/indexUnits";
+import { generateUnitGroup } from "../interfaces/unit.js";
+import { AgeEnum } from "../enum/ageEnum.js";
+import { TownCenter } from "../data/indexBuildings.js";
+import { Villager } from "../data/indexUnits.js";
 var Player = /** @class */ (function () {
     function Player(name) {
         this.name = name;

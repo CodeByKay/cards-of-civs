@@ -1,16 +1,16 @@
-import { modifyUnitGroup } from "../interfaces/unit";
+import { modifyUnitGroup } from "../interfaces/unit.js";
 // Damage = Base Damage + Counter Damage + Speed Difference + Range Difference
 // Calculate damage based on the attacking unit group's statistics
 function calculateDamage(attackerGroup, defenderGroup) {
     var totalDamage = attackerGroup.unit.baseDamage;
     // Calculate counter damage based on the enemy unit type
-    console.log("".concat(attackerGroup.unit.name, " counters"));
-    console.log('Counter damage array:', attackerGroup.unit.counterDamage);
-    console.log('Defender unit:', defenderGroup.unit.name);
+    // console.log(`${attackerGroup.unit.name} counters`);
+    // console.log('Counter damage array:', attackerGroup.unit.counterDamage);
+    // console.log('Defender unit:', defenderGroup.unit.name);
     for (var _i = 0, _a = attackerGroup.unit.counterDamage; _i < _a.length; _i++) {
         var counter = _a[_i];
-        console.log('Checking counter:', counter);
-        console.log('Counter unit:', counter.unitEnum);
+        // console.log('Checking counter:', counter);
+        // console.log('Counter unit:', counter.unitEnum);
         if (counter.unitEnum === defenderGroup.unit.unitEnum) {
             totalDamage += counter.damage;
             console.log("".concat(attackerGroup.unit.name, " counters ").concat(defenderGroup.unit.name, " for ").concat(counter.damage));
@@ -22,8 +22,10 @@ function calculateDamage(attackerGroup, defenderGroup) {
     // Calculate range difference
     var rangeDifference = attackerGroup.unit.range - defenderGroup.unit.range;
     // Add speed and range differences to total damage
-    totalDamage += speedDifference + rangeDifference;
-    return totalDamage * attackerGroup.count;
+    var individualDamage = totalDamage + speedDifference + rangeDifference;
+    var groupDamage = individualDamage * attackerGroup.count;
+    console.log("[Damage (".concat(totalDamage, ") + Speed (").concat(speedDifference, ") + Range (").concat(rangeDifference, ")] * Units (").concat(attackerGroup.count, ") = ").concat(groupDamage));
+    return groupDamage;
 }
 // Calculate damage between two armies and return the updated states
 export function resolveDamage(army1, army2) {

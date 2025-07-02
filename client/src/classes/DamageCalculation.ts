@@ -1,4 +1,4 @@
-import { modifyUnitGroup, UnitGroup } from "../interfaces/unit";
+import { modifyUnitGroup, UnitGroup } from "../interfaces/unit.js";
 
 // Damage = Base Damage + Counter Damage + Speed Difference + Range Difference
 
@@ -7,13 +7,13 @@ function calculateDamage(attackerGroup: UnitGroup, defenderGroup: UnitGroup): nu
     let totalDamage = attackerGroup.unit.baseDamage;
 
     // Calculate counter damage based on the enemy unit type
-    console.log(`${attackerGroup.unit.name} counters`);
-    console.log('Counter damage array:', attackerGroup.unit.counterDamage);
-    console.log('Defender unit:', defenderGroup.unit.name);
+    // console.log(`${attackerGroup.unit.name} counters`);
+    // console.log('Counter damage array:', attackerGroup.unit.counterDamage);
+    // console.log('Defender unit:', defenderGroup.unit.name);
 
     for (const counter of attackerGroup.unit.counterDamage) {
-        console.log('Checking counter:', counter);
-        console.log('Counter unit:', counter.unitEnum);
+        // console.log('Checking counter:', counter);
+        // console.log('Counter unit:', counter.unitEnum);
         if (counter.unitEnum === defenderGroup.unit.unitEnum) {
             totalDamage += counter.damage;
             console.log(`${attackerGroup.unit.name} counters ${defenderGroup.unit.name} for ${counter.damage}`);
@@ -28,9 +28,12 @@ function calculateDamage(attackerGroup: UnitGroup, defenderGroup: UnitGroup): nu
     const rangeDifference = attackerGroup.unit.range - defenderGroup.unit.range;
 
     // Add speed and range differences to total damage
-    totalDamage += speedDifference + rangeDifference;
+    const individualDamage = totalDamage + speedDifference + rangeDifference;
+    const groupDamage = individualDamage * attackerGroup.count;
 
-    return totalDamage * attackerGroup.count;
+    console.log(`[Damage (${totalDamage}) + Speed (${speedDifference}) + Range (${rangeDifference})] * Units (${attackerGroup.count}) = ${groupDamage}`);
+
+    return groupDamage;
 }
 
 // Calculate damage between two armies and return the updated states

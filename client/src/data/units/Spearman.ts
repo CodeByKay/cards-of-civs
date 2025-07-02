@@ -1,7 +1,7 @@
-import { BaseUnit } from "../../interfaces/unit";
-import { AgeEnum } from "../../enum/ageEnum";
-import { MilitaryUpgrade } from "../../interfaces/military";
-import { UnitEnum } from "../../enum/unitEnum";
+import { BaseUnit } from "../../interfaces/unit.js";
+import { AgeEnum } from "../../enum/ageEnum.js";
+import { MilitaryUpgrade } from "../../interfaces/military.js";
+import { UnitEnum } from "../../enum/unitEnum.js";
 
 export const Spearman: BaseUnit = {
     name: 'Spearman',
@@ -41,7 +41,7 @@ export const Spearman_3: typeof Spearman = {
         }, 
         {
             unitEnum: UnitEnum.CAVALRY_ARCHER,
-            damage: 32
+            damage: 15
         }, 
         {
             unitEnum: UnitEnum.CAMEL,
@@ -82,7 +82,7 @@ export const Spearman_2: typeof Spearman = {
         }, 
         {
             unitEnum: UnitEnum.CAVALRY_ARCHER,
-            damage: 22
+            damage: 12
         }, 
         {
             unitEnum: UnitEnum.CAMEL,
@@ -123,7 +123,7 @@ export const Spearman_1: typeof Spearman = {
         }, 
         {
             unitEnum: UnitEnum.CAVALRY_ARCHER,
-            damage: 15
+            damage: 10
         }, 
         {
             unitEnum: UnitEnum.CAMEL,
